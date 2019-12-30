@@ -18,20 +18,20 @@ public class CustomerResource {
 		return customerRepo.getCustomers();
 	}	
 	
-	@GET
-	@Path("customer/{customerID}")
-	public Customer getCustomer(@PathParam("customerID") int customerID) 
-	{
-		return customerRepo.getCustomer(customerID);
-	}	
-	
-	
-	@POST
-	@Path("customer")
-	public Customer addCustomer(Customer c) 
-	{
-		System.out.println(c);
-		customerRepo.addCustomer(c);
-		return c;
-	}
+//	@GET
+//	@Path("customer/{customerID}")
+//	public Customer getCustomer(@PathParam("customerID") int customerID) 
+//	{
+//		return customerRepo.getCustomer(customerID);
+//	}	
+//	
+//	
+//	@POST
+//	@Path("customer")
+//	public Customer addCustomer(Customer c) 
+//	{
+//		System.out.println(c);
+//		customerRepo.addCustomer(c);
+//		return c;
+//	}
 }
