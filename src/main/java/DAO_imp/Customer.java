@@ -1,4 +1,4 @@
-package com.primesh.BbankMaven;
+package DAO_imp;
 
 public class Customer {
 	private String firstName;
@@ -9,6 +9,7 @@ public class Customer {
 	private int accountNo;
 	private String password;
 	private int mobileNo;
+	private MobileAgent mobileAgent;
 	
 	public String getFirstName() {
 		return firstName;
@@ -64,6 +65,11 @@ public class Customer {
 				+ NIC + ", pinNo=" + pinNo + ", accountNo=" + accountNo + ", password=" + password + ", mobileNo="
 				+ mobileNo + "]";
 	}
-	
+	public MobileAgent getMobileAgent() {
+		return mobileAgent;
+	}
+	public void setMobileAgent(MobileAgent mobileAgent) {
+		this.mobileAgent = mobileAgent;
+	}
 	
 }
