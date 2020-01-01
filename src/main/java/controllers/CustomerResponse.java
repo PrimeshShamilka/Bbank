@@ -1,14 +1,15 @@
-package responses;
-import models.ModelCentralServer;
+package controllers;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import DAO_imp.Customer;
+
+import databaseConnection.CentralServer;
+import models.Customer;
 
 public class CustomerResponse {
 	
-	ModelCentralServer customerRepo = ModelCentralServer.getInstance();
+	CentralServer customerRepo = CentralServer.getInstance();
 	
 	public List<Customer> getCustomers()
 	{
@@ -19,7 +20,6 @@ public class CustomerResponse {
 			ResultSet rs = st.executeQuery(sql);
 			while(rs.next()) 
 			{
-				System.out.println("in");
 				Customer c = new Customer();
 				c.setCustomerID(rs.getInt(1));
 				

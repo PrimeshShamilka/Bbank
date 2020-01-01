@@ -1,16 +1,16 @@
-package DAO_imp;
+package models;
 
 import java.sql.Timestamp;
 
 public class Transaction {
 	private int transactionID;
 	private String transactionType;
-	private MobileAgent mobileAgent;
-	private Customer customer;
+	private int mobileAgentID;
+	private int customerID;
 	private float transactionAmount;
 	private String transactionPriority;
 	private Timestamp time;
-	private Account account;
+	private int accountNo;
 	
 	public int getTransactionID() {
 		return transactionID;
@@ -23,18 +23,6 @@ public class Transaction {
 	}
 	public void setTransactionType(String transactionType) {
 		this.transactionType = transactionType;
-	}
-	public MobileAgent getMobileAgent() {
-		return mobileAgent;
-	}
-	public void setMobileAgent(MobileAgent mobileAgent) {
-		this.mobileAgent = mobileAgent;
-	}
-	public Customer getCustomer() {
-		return customer;
-	}
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
 	}
 	public float getTransactionAmount() {
 		return transactionAmount;
@@ -54,11 +42,23 @@ public class Transaction {
 	public void setTime(Timestamp time) {
 		this.time = time;
 	}
-	public Account getAccount() {
-		return account;
+	public int getAccountNo() {
+		return accountNo;
 	}
-	public void setAccount(Account account) {
-		this.account = account;
+	public void setAccountNo(int accountNo) {
+		this.accountNo = accountNo;
+	}
+	public int getMobileAgentID() {
+		return mobileAgentID;
+	}
+	public void setMobileAgentID(int mobileAgentID) {
+		this.mobileAgentID = mobileAgentID;
+	}
+	public int getCustomerID() {
+		return customerID;
+	}
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
 	}
 	
 }

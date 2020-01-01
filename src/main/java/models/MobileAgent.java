@@ -1,4 +1,4 @@
-package DAO_imp;
+package models;
 
 public class MobileAgent {
 	private int AgentID;

@@ -1,4 +1,4 @@
-package DAO_imp;
+package models;
 
 public class SavingsAccount extends Account{
 	private SavingsAccountType savingsAccountType;

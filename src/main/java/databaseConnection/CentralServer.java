@@ -1,4 +1,4 @@
-package models;
+package databaseConnection;
 
 import java.sql.Connection;
 
@@ -9,15 +9,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModelCentralServer {
+public class CentralServer {
 	
-	private static ModelCentralServer centralServerDB;
+	private static CentralServer centralServerDB;
 	private Connection connection;
 	private String url = "jdbc:mysql://localhost:3306/test2";
 	private String username = "root";
 	private String password = "password";
 	
-	private ModelCentralServer() throws SQLException
+	private CentralServer() throws SQLException
 	{
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -31,12 +31,12 @@ public class ModelCentralServer {
         return connection;
     }
 
-    public static ModelCentralServer getInstance(){
+    public static CentralServer getInstance(){
     	try {
             if (centralServerDB == null) {
-            	centralServerDB = new ModelCentralServer();
+            	centralServerDB = new CentralServer();
             } else if (centralServerDB.getConnection().isClosed()) {
-            	centralServerDB = new ModelCentralServer();
+            	centralServerDB = new CentralServer();
             }
 
             return centralServerDB;

@@ -1,15 +1,22 @@
-package DAO_imp;
+package models;
 
-public class FDAccountType {
-	private int FDTypeID;
+public class SavingsAccountType {
+	private int typeID;
+	private float minAccountBalance;
 	private float interestRate;
 	private int timeDurationInYears;
 	
-	public int getFDTypeID() {
-		return FDTypeID;
+	public int getTypeID() {
+		return typeID;
 	}
-	public void setFDTypeID(int fDTypeID) {
-		FDTypeID = fDTypeID;
+	public void setTypeID(int typeID) {
+		this.typeID = typeID;
+	}
+	public float getMinAccountBalance() {
+		return minAccountBalance;
+	}
+	public void setMinAccountBalance(float minAccountBalance) {
+		this.minAccountBalance = minAccountBalance;
 	}
 	public float getInterestRate() {
 		return interestRate;

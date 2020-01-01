@@ -1,4 +1,4 @@
-package DAO_imp;
+package models;
 
 public class Customer {
 	private String firstName;
