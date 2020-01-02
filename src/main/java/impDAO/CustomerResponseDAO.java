@@ -1,17 +1,22 @@
-package controllers;
+package impDAO;
 import java.util.ArrayList;
+
+
 import java.util.List;
+
+import DAO.CustomerDAO;
+
 import java.sql.Statement;
 import java.sql.ResultSet;
 
 import databaseConnection.CentralServer;
 import models.Customer;
 
-public class CustomerResponse {
+public class CustomerResponseDAO implements CustomerDAO{
 	
 	CentralServer customerRepo = CentralServer.getInstance();
 	
-	public List<Customer> getCustomers()
+	public List<Customer> getCustomerList()
 	{
 		List<Customer> customers = new ArrayList<>();
 		String sql = "select * from customers";
@@ -29,7 +34,7 @@ public class CustomerResponse {
 			System.out.println(e);
 		}
 		
-		return customers;
+		return customers;	
 	}
 
 }

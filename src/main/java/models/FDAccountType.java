@@ -3,7 +3,7 @@ package models;
 public class FDAccountType {
 	private int FDTypeID;
 	private float interestRate;
-	private int timeDurationInYears;
+	private int timeDurationInMonth;
 	
 	public int getFDTypeID() {
 		return FDTypeID;
@@ -17,12 +17,13 @@ public class FDAccountType {
 	public void setInterestRate(float interestRate) {
 		this.interestRate = interestRate;
 	}
-	public int getTimeDurationInYears() {
-		return timeDurationInYears;
+	public int getTimeDurationInMonth() {
+		return timeDurationInMonth;
 	}
-	public void setTimeDurationInYears(int timeDurationInYears) {
-		this.timeDurationInYears = timeDurationInYears;
+	public void setTimeDurationInMonth(int timeDurationInMonth) {
+		this.timeDurationInMonth = timeDurationInMonth;
 	}
+
 	
 	
 }

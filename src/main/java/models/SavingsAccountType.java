@@ -4,7 +4,12 @@ public class SavingsAccountType {
 	private int typeID;
 	private float minAccountBalance;
 	private float interestRate;
-	private int timeDurationInYears;
+	
+	public SavingsAccountType(int typeID,float minAccountBalance, float interestRate) {
+		this.typeID = typeID;
+		this.interestRate = interestRate;
+		this.minAccountBalance = minAccountBalance;
+	}
 	
 	public int getTypeID() {
 		return typeID;
@@ -24,12 +29,4 @@ public class SavingsAccountType {
 	public void setInterestRate(float interestRate) {
 		this.interestRate = interestRate;
 	}
-	public int getTimeDurationInYears() {
-		return timeDurationInYears;
-	}
-	public void setTimeDurationInYears(int timeDurationInYears) {
-		this.timeDurationInYears = timeDurationInYears;
-	}
-	
-	
 }

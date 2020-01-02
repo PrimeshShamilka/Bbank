@@ -3,6 +3,12 @@ package models;
 import java.sql.Timestamp;
 
 public class FixedDeposit extends Account{
+	
+	public FixedDeposit(int accountNo, float accountBalance, Customer customer) {
+		super(accountNo, accountBalance, customer);
+		// TODO Auto-generated constructor stub
+	}
+	
 	private Timestamp openingDate;
 	private FDAccountType FDType;
 	

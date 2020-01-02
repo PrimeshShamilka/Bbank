@@ -4,6 +4,13 @@ public class Account {
 	private int accountNo;
 	private float accountBalance;
 	private Customer customer;
+	
+	public Account(int accountNo, float accountBalance, Customer customer) {
+		this.accountNo = accountNo;
+		this.accountBalance = accountBalance;
+		this.customer = customer;
+	}
+	
 	public int getAccountNo() {
 		return accountNo;
 	}

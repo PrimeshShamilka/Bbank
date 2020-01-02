@@ -6,10 +6,17 @@ public class Customer {
 	private int customerID;
 	private int NIC;
 	private int pinNo;
-	private int accountNo;
 	private String password;
 	private int mobileNo;
 	private MobileAgent mobileAgent;
+	
+	public Customer() {
+		
+	}
+	
+	public Customer(int customerID) {
+		this.customerID = customerID;
+	}
 	
 	public String getFirstName() {
 		return firstName;
@@ -41,12 +48,6 @@ public class Customer {
 	public void setPinNo(int pinNo) {
 		this.pinNo = pinNo;
 	}
-	public int getAccountNo() {
-		return accountNo;
-	}
-	public void setAccountNo(int accountNo) {
-		this.accountNo = accountNo;
-	}
 	public String getPassword() {
 		return password;
 	}
@@ -62,7 +63,7 @@ public class Customer {
 	@Override
 	public String toString() {
 		return "Customer [firstName=" + firstName + ", lastName=" + lastName + ", customerID=" + customerID + ", NIC="
-				+ NIC + ", pinNo=" + pinNo + ", accountNo=" + accountNo + ", password=" + password + ", mobileNo="
+				+ NIC + ", pinNo=" + pinNo + ", password=" + password + ", mobileNo="
 				+ mobileNo + "]";
 	}
 	public MobileAgent getMobileAgent() {

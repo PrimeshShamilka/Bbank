@@ -8,10 +8,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import response.AuthorizationResponse;
+import response.BaseResponse;
 import util.JwTokenHelper;
 
 @Path("authenticationserver")
 public class AuthenticationServer {
+	
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -26,19 +29,20 @@ public class AuthenticationServer {
             // Return the token on the response
             return Response.ok(token).build();
             
-            //return getResponse(new AuthorizationResponse(BaseResponse.SUCCESS, "You're authenticated successfully. Private key will be valid for 30 mins", privateKey));
+//            return getResponse(new AuthorizationResponse(BaseResponse.SUCCESS, "You're authenticated successfully. Private key will be valid for 30 mins", privateKey));
 
 
         } catch (Exception e) {
             return Response.status(Response.Status.FORBIDDEN).build();
         } 
-
+        
         
     }
     
     private void authenticate(String userName, String password) throws Exception {
         // Authenticate against a database, LDAP, file or whatever
         // Throw an Exception if the credentials are invalid
+    	
     }
 
     private String issueToken(String userName,String password) {

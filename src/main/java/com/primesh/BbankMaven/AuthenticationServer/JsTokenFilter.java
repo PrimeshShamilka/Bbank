@@ -28,8 +28,8 @@ public class JsTokenFilter implements ContainerRequestFilter {
     public void filter(ContainerRequestContext request) {  	    
 	    // Get the Authorization header from the request
 	    String privateKeyHeaderValue = request.getHeaderString(PRIVATE_KEY);
+	    System.out.println("in");
 	    System.out.println(privateKeyHeaderValue);
-        
 	     // Validate the Authorization header
         if (privateKeyHeaderValue == null || privateKeyHeaderValue.isEmpty()) 
         {
